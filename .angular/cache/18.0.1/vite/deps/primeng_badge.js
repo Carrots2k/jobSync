@@ -4,14 +4,14 @@ import {
 import {
   SharedModule,
   UniqueComponentId
-} from "./chunk-DBLSY2FX.js";
+} from "./chunk-4LMJ6UXA.js";
 import {
   CommonModule,
   DOCUMENT,
   NgClass,
   NgIf,
   NgStyle
-} from "./chunk-CMHO36X6.js";
+} from "./chunk-E66X5BGH.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -40,7 +40,7 @@ import {
   ɵɵtemplate,
   ɵɵtext,
   ɵɵtextInterpolate
-} from "./chunk-UW4MIM2Y.js";
+} from "./chunk-72WYYBB4.js";
 
 // node_modules/primeng/fesm2022/primeng-badge.mjs
 function Badge_span_0_Template(rf, ctx) {

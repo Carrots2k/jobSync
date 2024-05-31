@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { SidebarComponent } from './comps/sidebar/sidebar.component';
+import { MainlayoutComponent } from './layout/mainlayout/mainlayout.component';
 
 export const routes: Routes = [
-    {path: '', component: SidebarComponent}
+    {path: '', component: MainlayoutComponent}
 ];

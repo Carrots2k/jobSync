@@ -1,0 +1,39 @@
+.layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .layout-content {
+    display: flex;
+    flex: 1;
+  }
+  
+  .content-container {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  app-navbar,
+  app-footer {
+    flex-shrink: 0;
+  }
+  
+  app-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    z-index: 0;
+  }
+  
+ 
+  .layout-wrapper {
+    position: relative;
+  }
+  
+  app-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1; 
+  }
+  
+  

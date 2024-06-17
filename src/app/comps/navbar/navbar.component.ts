@@ -6,6 +6,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
 import { RippleModule } from 'primeng/ripple';
 import { ButtonModule } from 'primeng/button';
+import { SidebarService } from '../../services/sidebar.service';
 
 @Component({
   selector: 'app-navbar',
@@ -15,5 +16,9 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  constructor(private sidebarService: SidebarService) {}
 
+  toggleSidebar() {
+    this.sidebarService.toggleSidebar();
+  }
 }

@@ -1,18 +1,12 @@
 import {
   BaseIcon
-} from "./chunk-ZVNUEILC.js";
+} from "./chunk-H3ACWPFL.js";
 import {
   Ripple
-} from "./chunk-3FZTABQW.js";
+} from "./chunk-X532QFES.js";
 import {
   DomHandler
 } from "./chunk-TKJMWDM5.js";
-import {
-  ObjectUtils,
-  PrimeTemplate,
-  SharedModule,
-  UniqueComponentId
-} from "./chunk-4LMJ6UXA.js";
 import {
   DOCUMENT,
   NgClass,
@@ -20,7 +14,13 @@ import {
   NgStyle,
   NgTemplateOutlet,
   isPlatformBrowser
-} from "./chunk-E66X5BGH.js";
+} from "./chunk-OEREKIDM.js";
+import {
+  ObjectUtils,
+  PrimeTemplate,
+  SharedModule,
+  UniqueComponentId
+} from "./chunk-MCB65DMY.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -70,7 +70,8 @@ import {
   ɵɵtemplate,
   ɵɵtext,
   ɵɵtextInterpolate
-} from "./chunk-72WYYBB4.js";
+} from "./chunk-EHFXTLMH.js";
+import "./chunk-SXIXOCJ4.js";
 
 // node_modules/primeng/fesm2022/primeng-autofocus.mjs
 var AutoFocus = class _AutoFocus {

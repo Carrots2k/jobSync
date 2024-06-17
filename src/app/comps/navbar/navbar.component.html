@@ -1,4 +1,4 @@
-<div class="card">
+<!-- <div class="card">
     <p-menubar>
         <ng-template pTemplate="start">
             <p-button  icon="pi pi-align-justify"></p-button>
@@ -11,4 +11,18 @@
             </div>
         </ng-template>
     </p-menubar>
-</div>
+</div> -->
+
+    <p-menubar>
+      <ng-template pTemplate="start">
+        <p-button icon="pi pi-align-justify" (click)="toggleSidebar()"></p-button>
+      </ng-template>
+      <ng-template pTemplate="end">
+        <div class="flex align-items-center gap-2">
+          <input type="text" pInputText placeholder="Search" class="w-8rem sm:w-auto" />
+          <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle"></p-avatar>
+        </div>
+      </ng-template>
+    </p-menubar>
+
+  

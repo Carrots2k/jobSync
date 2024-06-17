@@ -6,6 +6,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { StyleClassModule } from 'primeng/styleclass';
 import { Sidebar } from 'primeng/sidebar';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { SidebarService } from '../../services/sidebar.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -17,10 +18,12 @@ import { NavbarComponent } from '../navbar/navbar.component';
 export class SidebarComponent {
   @ViewChild('sidebarRef') sidebarRef!: Sidebar;
 
-  closeCallback(e: any): void {
-      this.sidebarRef.close(e);
-  }
-
   sidebarVisible: boolean = false;
+  
+  constructor(private sidebarService: SidebarService) {
+    this.sidebarService.sidebarToggle$.subscribe(() => {
+      this.sidebarVisible = !this.sidebarVisible;
+    });
+  }
 
 }

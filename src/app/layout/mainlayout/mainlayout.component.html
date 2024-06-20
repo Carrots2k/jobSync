@@ -1,12 +1,24 @@
-<div class="layout-wrapper">
+<!-- <div class="layout-wrapper">
     <app-navbar></app-navbar>
     <div class="layout-content">
+      <app-sidebar></app-sidebar>
       <div class="content-container">
         <router-outlet></router-outlet>
       </div>
-      <app-sidebar></app-sidebar>
+    </div>
+  </div> -->
+
+  
+  <div class="layout-wrapper">
+    <app-navbar></app-navbar>
+    <div class="layout-content">
+      <app-sidebar id="sidebar"></app-sidebar>
+      <div class="content-container" id="content">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
+  
   
   
 

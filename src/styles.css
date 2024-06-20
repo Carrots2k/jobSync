@@ -21,4 +21,19 @@
     .p-component-overlay.p-sidebar-mask {
         background-color: transparent !important;
       }
+     
+
+      .p-sidebar-left {
+        position: relative; 
+        width: 250px; 
+        height: 100%; 
+        display: flex;
+        flex-direction: column;
+        background: #ffffff;
+        color: #4b5563;
+        border: 0 none;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        transition: margin-left 2s;
+      }
+  
 }

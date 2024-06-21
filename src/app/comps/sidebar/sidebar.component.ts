@@ -18,7 +18,7 @@ import { SidebarService } from '../../services/sidebar.service';
 export class SidebarComponent {
   @ViewChild('sidebarRef') sidebarRef!: Sidebar;
 
-  sidebarVisible: boolean = false;
+  sidebarVisible: boolean = true;
   
   constructor(private sidebarService: SidebarService) {
     this.sidebarService.sidebarToggle$.subscribe(() => {

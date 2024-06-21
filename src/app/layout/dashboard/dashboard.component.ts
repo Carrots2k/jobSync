@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../../comps/navbar/navbar.component';
-import { SidebarComponent } from '../../comps/sidebar/sidebar.component';
-import { RouterOutlet } from '@angular/router';
+import { LivestatsComponent } from '../../comps/livestats/livestats.component';
+import { AllstatscardsComponent } from '../../comps/allstatscards/allstatscards.component';
+
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [NavbarComponent, SidebarComponent, RouterOutlet],
+  imports: [LivestatsComponent, AllstatscardsComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })

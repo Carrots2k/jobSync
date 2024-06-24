@@ -1,0 +1,15 @@
+<div class="surface-ground px-4 py-0 md:px-6 lg:px-5">
+    <div class="grid">
+        <div class="col-12 md:col-6 lg:col-6">
+            <div class="surface-card shadow-2 p-3 border-round">
+                <app-linechart [currentYearData]="curentYeaData" [lastYearData]="lastYearData"></app-linechart>
+            </div>
+        </div>
+        <div class="col-12 md:col-6 lg:col-6">
+            <div class="surface-card shadow-2 p-3 border-round">
+                <app-barchart [currentYearData]="curentYeaData" [lastYearData]="lastYearData"></app-barchart>
+            </div>
+        </div>
+    </div>
+</div>
+

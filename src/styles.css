@@ -19,7 +19,8 @@
 
     /* Add this to your CSS */
     .p-component-overlay.p-sidebar-mask {
-        background-color: transparent !important;
+        display: none;
+        background-color: none !important;
       }
      
 

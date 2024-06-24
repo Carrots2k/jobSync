@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { LivestatsComponent } from '../livestats/livestats.component';
-import { AllstatscardsComponent } from '../allstatscards/allstatscards.component';
+import { LivestatsComponent } from '../../comps/livestats/livestats.component';
+import { AllstatscardsComponent } from '../../comps/allstatscards/allstatscards.component';
+
 
 
 @Component({

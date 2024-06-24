@@ -7,6 +7,7 @@ import { StyleClassModule } from 'primeng/styleclass';
 import { Sidebar } from 'primeng/sidebar';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { SidebarService } from '../../services/sidebar.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -19,11 +20,22 @@ export class SidebarComponent {
   @ViewChild('sidebarRef') sidebarRef!: Sidebar;
 
   sidebarVisible: boolean = true;
+  routerLink : string  = '/home'
   
-  constructor(private sidebarService: SidebarService) {
+  constructor(private sidebarService: SidebarService,private router: Router) {
     this.sidebarService.sidebarToggle$.subscribe(() => {
       this.sidebarVisible = !this.sidebarVisible;
     });
+  }
+
+  goHome(){
+    console.log('going to home')
+    this.router.navigate(['/home'])
+  }
+
+  goJobs(){
+    console.log('going to jobs')
+    this.router.navigate(['/jobs'])
   }
 
 }

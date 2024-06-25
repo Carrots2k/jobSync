@@ -14,12 +14,13 @@ import { jobsModels } from '../../models/jobs';
 import { JobsService } from '../../services/jobs.service';
 import { Table } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
+import { CreateJobComponent } from '../create-job/create-job.component';
 
 @Component({
   selector: 'app-jobstable',
   standalone: true,
   imports: [TableModule, TagModule, ButtonModule,IconFieldModule, InputIconModule, 
-    CommonModule, MultiSelectModule, InputTextModule, DropdownModule, SliderModule, ProgressBarModule, DialogModule ],
+    CommonModule, MultiSelectModule, InputTextModule, DropdownModule, SliderModule, ProgressBarModule, DialogModule, CreateJobComponent ],
   templateUrl: './jobstable.component.html',
   styleUrl: './jobstable.component.css'
 })
@@ -41,8 +42,8 @@ export class JobstableComponent implements OnInit{
   }
 
   openNew() {
-    // this.jobDialog = true;
-}
+    this.jobDialog = true;
+  }
 
   loadData(): void {
     this.jobs = this.jobService.getJobs();

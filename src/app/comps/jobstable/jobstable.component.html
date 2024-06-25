@@ -75,7 +75,10 @@
 <p-dialog 
         [(visible)]="jobDialog" 
         [style]="{ width: '450px' }" 
-        header="Product Details" 
+        header="Create a New Job" 
         [modal]="true" 
         styleClass="p-fluid">
+        <div>
+            <app-create-job></app-create-job>
+        </div>
 </p-dialog>

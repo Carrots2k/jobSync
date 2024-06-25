@@ -13,12 +13,13 @@ import { ProgressBarModule } from 'primeng/progressbar';
 import { jobsModels } from '../../models/jobs';
 import { JobsService } from '../../services/jobs.service';
 import { Table } from 'primeng/table';
+import { DialogModule } from 'primeng/dialog';
 
 @Component({
   selector: 'app-jobstable',
   standalone: true,
   imports: [TableModule, TagModule, ButtonModule,IconFieldModule, InputIconModule, 
-    CommonModule, MultiSelectModule, InputTextModule, DropdownModule, SliderModule, ProgressBarModule ],
+    CommonModule, MultiSelectModule, InputTextModule, DropdownModule, SliderModule, ProgressBarModule, DialogModule ],
   templateUrl: './jobstable.component.html',
   styleUrl: './jobstable.component.css'
 })
@@ -31,6 +32,7 @@ export class JobstableComponent implements OnInit{
 
   activityValues: number[] = [0, 100];
   searchValue: string | undefined;
+  jobDialog : boolean = false;
 
   constructor(private jobService: JobsService) {}
 
@@ -39,9 +41,7 @@ export class JobstableComponent implements OnInit{
   }
 
   openNew() {
-    // this.product = {};
-    // this.submitted = false;
-    // this.productDialog = true;
+    // this.jobDialog = true;
 }
 
   loadData(): void {

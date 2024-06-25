@@ -3,6 +3,7 @@ export interface jobsModels {
     name: string,
     agent: string,
     divisions: string [],
+    description: string,
     date: string,
     status: string,
     activity: number

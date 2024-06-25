@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { jobsModels } from '../models/jobs';
-import { jobModelsData } from '../dummy data/jobsModelData'
+import { jobModelsData } from '../data/jobsModelData'
 
 @Injectable({
   providedIn: 'root'

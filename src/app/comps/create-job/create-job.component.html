@@ -1,24 +1,41 @@
-<div class="field">
-    <label for="name">Name</label>
-    <input 
-        type="text" 
-        pInputText 
-        id="name" 
-        [(ngModel)]="product.name" 
-        required 
-        autofocus />
-    <small class="p-error" *ngIf="submitted && !product.name">
-        Name is required.
-    </small>
-</div>
-<div class="field">
-    <label for="description">Description</label>
-    <textarea 
+<form [formGroup]="jobForm" (ngSubmit)="onSubmit()" class="mt-4">
+  
+    <p-floatLabel class="mb-4">
+      <input pInputText id="username" formControlName="name" />
+      <label for="username">Username</label>
+    </p-floatLabel>
+
+    <!-- <div class="card flex justify-content-center mt-4">
+        <p-floatLabel>
+            <textarea 
+                id="float-input" 
+                rows="5"
+                cols="30" 
+                pInputTextarea>
+            </textarea>
+            <label for="float-input">Summary</label>
+        </p-floatLabel>
+    </div>
+   -->
+    <p-floatLabel class="mt-4">
+      <textarea 
         id="description" 
-        pInputTextarea 
-        [(ngModel)]="product.description" 
-        required 
-        rows="3" 
-        cols="20">
-    </textarea>
-</div>
+        rows="5" cols="30" 
+        formControlName="description" 
+        pInputTextarea>
+      </textarea>
+      <label  for="description">Description</label>
+    </p-floatLabel>
+  
+    <div class="card flex justify-content-center mt-4">
+      <p-multiSelect 
+        [options]="divisions" 
+        formControlName="selectedDivisions" 
+        optionLabel="name" 
+        placeholder="Select Divisions">
+      </p-multiSelect>
+    </div>
+  
+    <button type="submit">Submit</button>
+  </form>
+  

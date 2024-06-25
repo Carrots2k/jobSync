@@ -38,9 +38,16 @@ export class JobstableComponent implements OnInit{
     this.loadData();
   }
 
+  openNew() {
+    // this.product = {};
+    // this.submitted = false;
+    // this.productDialog = true;
+}
+
   loadData(): void {
     this.jobs = this.jobService.getJobs();
-    this.loading = false; // Assuming data loading is complete when ngOnInit completes
+    console.log(this.jobs);
+    this.loading = false; 
   }
 
   clear(table: Table) {

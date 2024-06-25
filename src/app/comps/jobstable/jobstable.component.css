@@ -1,4 +1,4 @@
-:host ::ng-deep {
+/* :host ::ng-deep {
     .p-paginator {
         .p-paginator-current {
             margin-left: auto;
@@ -55,7 +55,7 @@
         width: 100%;
     }
     
-    /* Responsive */
+
     .p-datatable-customers .p-datatable-tbody > tr > td .p-column-title {
         display: none;
     }
@@ -98,4 +98,9 @@
             }
         }
     } 
-}   
+}    */
+
+.p-datatable-header {
+    border: 0px !important;
+    border-width: 0px !important;
+}

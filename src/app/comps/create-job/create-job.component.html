@@ -1,23 +1,14 @@
 <form [formGroup]="jobForm" (ngSubmit)="onSubmit()" class="mt-4">
-  
-    <p-floatLabel class="mb-4">
+
+  <div class="mb-4">
+    <p-floatLabel >
       <input pInputText id="username" formControlName="name" />
       <label for="username">Username</label>
     </p-floatLabel>
-
-    <!-- <div class="card flex justify-content-center mt-4">
-        <p-floatLabel>
-            <textarea 
-                id="float-input" 
-                rows="5"
-                cols="30" 
-                pInputTextarea>
-            </textarea>
-            <label for="float-input">Summary</label>
-        </p-floatLabel>
-    </div>
-   -->
-    <p-floatLabel class="mt-4">
+</div>
+  
+   <div class="mt-4">
+    <p-floatLabel>
       <textarea 
         id="description" 
         rows="5" cols="30" 
@@ -26,16 +17,20 @@
       </textarea>
       <label  for="description">Description</label>
     </p-floatLabel>
-  
-    <div class="card flex justify-content-center mt-4">
+</div>
+   
+    <div class="mt-2">
       <p-multiSelect 
         [options]="divisions" 
         formControlName="selectedDivisions" 
-        optionLabel="name" 
+        optionLabel="division" 
         placeholder="Select Divisions">
       </p-multiSelect>
     </div>
   
-    <button type="submit">Submit</button>
+    <div class="card flex flex-wrap gap-3 justify-content-between mt-3">
+      <p-button label="Cancel" severity="secondary" />
+      <p-button label="Submit" />
+  </div>
   </form>
   

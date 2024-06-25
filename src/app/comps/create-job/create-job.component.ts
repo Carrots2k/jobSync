@@ -7,11 +7,13 @@ import { DivisionService } from '../../services/division.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, FormsModule , Validators  } from '@angular/forms';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { divisionModels } from '../../models/divisions';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-create-job',
   standalone: true,
-  imports: [InputTextModule, InputTextModule, MultiSelectModule, CommonModule, ReactiveFormsModule, FloatLabelModule, InputTextareaModule , FormsModule   ],
+  imports: [InputTextModule, InputTextModule, MultiSelectModule, CommonModule, ReactiveFormsModule, FloatLabelModule, InputTextareaModule , 
+    FormsModule , ButtonModule  ],
   templateUrl: './create-job.component.html',
   styleUrl: './create-job.component.css'
 })
@@ -32,6 +34,7 @@ constructor(private fb: FormBuilder, private divisionService: DivisionService){
 
   loadForm(){
     this.divisions = this.divisionService.getDivisions().divisions;
+    console.log(this.divisions);
       
     this.jobForm = this.fb.group({
       name: ['', Validators.required],

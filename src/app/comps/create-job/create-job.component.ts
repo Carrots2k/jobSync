@@ -6,8 +6,9 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { DivisionService } from '../../services/division.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, FormsModule , Validators  } from '@angular/forms';
 import { FloatLabelModule } from 'primeng/floatlabel';
-import { divisionModels } from '../../models/divisions';
+
 import { ButtonModule } from 'primeng/button';
+import { divisionModel } from '../../models/division';
 
 @Component({
   selector: 'app-create-job',
@@ -21,10 +22,10 @@ export class CreateJobComponent implements OnInit {
 
   @Output() closeModalEvent = new EventEmitter<boolean>();
   jobForm!: FormGroup;
-  divisions: string[] = [];
+  divisions: divisionModel[] = [];
   submitted: boolean = false;
   closeModal: boolean = false;
-  selectedDivisions: divisionModels[] = [];
+  selectedDivisions: divisionModel[] = [];
 
  
 constructor(private fb: FormBuilder, private divisionService: DivisionService){
@@ -35,7 +36,7 @@ constructor(private fb: FormBuilder, private divisionService: DivisionService){
   }
 
   loadForm(){
-    this.divisions = this.divisionService.getDivisions().divisions;
+    this.divisions = this.divisionService.getDivisions();
     console.log(this.divisions);
       
     this.jobForm = this.fb.group({

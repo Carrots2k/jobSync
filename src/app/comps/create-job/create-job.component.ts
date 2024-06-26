@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { MultiSelectModule } from 'primeng/multiselect';
@@ -19,9 +19,11 @@ import { ButtonModule } from 'primeng/button';
 })
 export class CreateJobComponent implements OnInit {
 
+  @Output() closeModalEvent = new EventEmitter<boolean>();
   jobForm!: FormGroup;
   divisions: string[] = [];
   submitted: boolean = false;
+  closeModal: boolean = false;
   selectedDivisions: divisionModels[] = [];
 
  
@@ -39,7 +41,7 @@ constructor(private fb: FormBuilder, private divisionService: DivisionService){
     this.jobForm = this.fb.group({
       name: ['', Validators.required],
       description: ['', Validators.required],
-      selectedDivisions: [[], Validators.required]
+      divisions: [[], Validators.required]
     });
   }
 
@@ -48,12 +50,19 @@ constructor(private fb: FormBuilder, private divisionService: DivisionService){
   }
 
   onSubmit() {
-    this.submitted = true;
 
     if (this.jobForm.invalid) {
       return;
     }
 
+    this.submitted = true;
     console.log('Form submitted:', this.jobForm.value);
+    this.showModal();
+  }
+
+  showModal(){
+    this.closeModal = true;
+    this.closeModalEvent.emit(this.closeModal);
+    console.log('show modal status', this.closeModal);
   }
 }

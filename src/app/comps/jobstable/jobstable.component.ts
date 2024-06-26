@@ -45,6 +45,15 @@ export class JobstableComponent implements OnInit{
     this.jobDialog = true;
   }
 
+  showDialog() {
+    this.jobDialog = true;
+  }
+
+  handleCloseModal(closeModal: boolean) {
+    this.jobDialog = !closeModal;
+    console.log('close modal status', this.jobDialog)
+  }
+
   loadData(): void {
     this.jobs = this.jobService.getJobs();
     console.log(this.jobs);
@@ -67,10 +76,10 @@ export class JobstableComponent implements OnInit{
       case 'In queue':
         return 'info';
 
-      case 'In progress': // Corrected spelling
+      case 'In progress': 
         return 'warning';
 
-      case 'renewal': // Corrected case
+      case 'renewal': 
         return null;
 
       default:

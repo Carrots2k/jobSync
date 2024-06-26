@@ -79,6 +79,6 @@
         [modal]="true" 
         styleClass="p-fluid">
         <div>
-            <app-create-job></app-create-job>
+            <app-create-job (closeModalEvent)="handleCloseModal($event)"></app-create-job>
         </div>
 </p-dialog>

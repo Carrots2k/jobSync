@@ -1,5 +1,43 @@
-import { divisionModels } from "../models/divisions";
+import { divisionModels } from "../models/divisionsModels";
+
 
 export const divisionModelsData: divisionModels = {
-    divisions: ["Production", "HR", "Sales", "Marketing", "Finance", "IT"]
+    divisions: [
+        { 
+          name: "Production", 
+          timeAllocation: "", 
+          materialNeeded: "", 
+          divisionDescription: "" 
+        },
+        { 
+          name: "HR", 
+          timeAllocation: "", 
+          materialNeeded: "", 
+          divisionDescription: "" 
+        },
+        { 
+          name: "Sales", 
+          timeAllocation: "", 
+          materialNeeded: "", 
+          divisionDescription: "" 
+        },
+        { 
+          name: "Marketing", 
+          timeAllocation: "", 
+          materialNeeded: "", 
+          divisionDescription: "" 
+        },
+        { 
+          name: "Finance", 
+          timeAllocation: "", 
+          materialNeeded: "", 
+          divisionDescription: "" 
+        },
+        { 
+          name: "IT", 
+          timeAllocation: "", 
+          materialNeeded: "", 
+          divisionDescription: "" 
+        }
+    ]
 }

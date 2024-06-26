@@ -22,7 +22,7 @@ export class CreateJobComponent implements OnInit {
   jobForm!: FormGroup;
   divisions: string[] = [];
   submitted: boolean = false;
-  selectedDivisions!: divisionModels[];
+  selectedDivisions: divisionModels[] = [];
 
  
 constructor(private fb: FormBuilder, private divisionService: DivisionService){

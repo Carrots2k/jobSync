@@ -74,7 +74,8 @@
 
 <p-dialog 
         [(visible)]="jobDialog" 
-        [style]="{ width: '450px'}" 
+        [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }" 
+        [style]="{ width: '50vw' }" 
         header="Create a New Job" 
         [modal]="true" 
         styleClass="p-fluid">

@@ -6,6 +6,8 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { DivisionService } from '../../services/division.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, FormsModule , Validators  } from '@angular/forms';
 import { FloatLabelModule } from 'primeng/floatlabel';
+import { CardModule } from 'primeng/card';
+import { CalendarModule } from 'primeng/calendar';
 
 import { ButtonModule } from 'primeng/button';
 import { divisionModel } from '../../models/division';
@@ -14,7 +16,7 @@ import { divisionModel } from '../../models/division';
   selector: 'app-create-job',
   standalone: true,
   imports: [InputTextModule, InputTextModule, MultiSelectModule, CommonModule, ReactiveFormsModule, FloatLabelModule, InputTextareaModule , 
-    FormsModule , ButtonModule  ],
+    FormsModule , ButtonModule, CardModule, CalendarModule  ],
   templateUrl: './create-job.component.html',
   styleUrl: './create-job.component.css'
 })
@@ -26,6 +28,9 @@ export class CreateJobComponent implements OnInit {
   submitted: boolean = false;
   closeModal: boolean = false;
   selectedDivisions: divisionModel[] = [];
+
+  time24h: Date[] | undefined;
+  
 
  
 constructor(private fb: FormBuilder, private divisionService: DivisionService){
